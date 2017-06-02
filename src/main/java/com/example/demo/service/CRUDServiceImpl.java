@@ -2,9 +2,6 @@ package com.example.demo.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.servlet.ModelAndView;
-
 import com.example.demo.DAO.CRUDDAO;
 import com.example.demo.Entity.CRUD;
 
@@ -28,7 +25,4 @@ public class CRUDServiceImpl implements CRUDService {
 		System.out.println("controller after cruddao call*************************");
 	}
 	
-	public String a() {
-		return "add";
-	}
 }
