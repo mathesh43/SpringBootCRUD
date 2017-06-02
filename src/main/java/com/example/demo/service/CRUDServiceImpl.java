@@ -1,5 +1,7 @@
 package com.example.demo.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import com.example.demo.DAO.CRUDDAO;
@@ -20,9 +22,28 @@ public class CRUDServiceImpl implements CRUDService {
 		return "welcome";
 	}
 	public void add(CRUD crud) {
-		System.out.println("controller before cruddao call*************************");
+		
 		cruddao.add(crud);
-		System.out.println("controller after cruddao call*************************");
+
+	}
+
+
+	@Override
+	public List<CRUD> getAllName() {
+		System.out.println("controller before crudservice call*************************");
+		return cruddao.getAllName();		
+		
+	}
+
+
+	@Override
+	public void deleteName(Integer id) {
+		cruddao.deleteName(id);
+	}
+	@Override
+	public CRUD getNameById(int id) {
+		CRUD crud = cruddao.getNameById(id);
+		return crud;
 	}
 	
 }

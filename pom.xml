@@ -68,7 +68,13 @@
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-devtools</artifactId>
                     <optional>true</optional>
-            </dependency> 
+            </dependency>
+		<!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
+<dependency>
+  <groupId>javax.servlet</groupId>
+  <artifactId>jstl</artifactId>
+  <version>1.2</version>
+</dependency>
 	</dependencies>
 
 	<build>
