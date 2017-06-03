@@ -1,15 +1,18 @@
 package com.example.demo.controller;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestMapping;
 import com.example.demo.Entity.CRUD;
@@ -41,21 +44,42 @@ public class CRUDController {
 	@RequestMapping("/list")
 	public ModelAndView listall(ModelAndView model) {
 		List<CRUD> listname = crudservice.getAllName();
-		model.addObject("listname", listname);
+		ModelAndView r=model.addObject("listname", listname);
+		System.out.println(r+"***************8");
 		model.setViewName("list");
 		return model;
 	
 	}
 	
 	@RequestMapping(value="delete/{id}")
-	public ResponseEntity<Void> deleteName(@PathVariable("id") Integer id) {
+	public String deleteName(@PathVariable("id") Integer id) {
 		crudservice.deleteName(id);
-		return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
+		return "redirect:/list";
 	}
-	@GetMapping("name/{id}")
-	public ResponseEntity<CRUD> getNameById(@PathVariable("id") Integer id) {
+	@RequestMapping("edit")
+	public ModelAndView getNameById(@PathVariable("id") Integer id) {
 		CRUD crud = crudservice.getNameById(id);
-		return new ResponseEntity<CRUD>(crud, HttpStatus.OK);
+		ModelAndView m=new ModelAndView();
+		m.addObject("edit",crud);
+		m.addObject("id",crud.getId());
+		m.addObject("firstname",crud.getFirstname());
+		m.addObject("lastname",crud.getLastname());
+		return m;
+	}
+	
+	@RequestMapping(value="edit/{id}")
+	public String edit() {
+		
+		ModelAndView m=new ModelAndView("edit");
+		
+		System.out.println(	m+"************************");
+		//m.setViewName("edit");
+		return "edit";
+	}
+	@RequestMapping("ed/{id}")
+	public String updateArticle(@RequestBody CRUD crud) {
+		crudservice.updateName(crud);
+		return "redirect:/list";
 	}
 	
 }

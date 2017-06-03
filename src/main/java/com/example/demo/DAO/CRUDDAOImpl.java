@@ -39,6 +39,14 @@ public class CRUDDAOImpl implements CRUDDAO {
 	public CRUD getNameById(int id) {
 		return entityManager.find(CRUD.class, id);
 	}
+	@Override
+	public void updateName(CRUD crud) {
+		CRUD crudname = getNameById(crud.getId());
+		crudname.setFirstname(crud.getFirstname());
+		crudname.setLastname(crud.getLastname());
+		entityManager.flush();
+		
+	}
 	
 	
 

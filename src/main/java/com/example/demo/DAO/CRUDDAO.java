@@ -10,4 +10,5 @@ public interface CRUDDAO {
 	public List<CRUD> getAllName();
 	public void deleteName(Integer id);
 	CRUD getNameById(int id);
+	public void updateName(CRUD crud);
 }

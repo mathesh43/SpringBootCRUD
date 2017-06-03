@@ -45,5 +45,12 @@ public class CRUDServiceImpl implements CRUDService {
 		CRUD crud = cruddao.getNameById(id);
 		return crud;
 	}
+
+
+	@Override
+	public void updateName(CRUD crud) {
+		cruddao.updateName(crud);
+		
+	}
 	
 }
