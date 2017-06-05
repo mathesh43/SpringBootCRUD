@@ -3,9 +3,22 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="css/adminmenu.css"></link>
+</head>
+
 <title>Employee Management Screen</title>
 </head>
 <body>
+
+<ul>
+  <li ><a class="stable"  >Library Management System</a></li>
+  <li><a class="active" href="#">Home</a></li>
+  <li><a class="active" href="#">Books</a></li>
+  <li><a class="active" href="#">Category</a></li>
+  <li><a class="active" href="#">Rack</a></li>
+  <li><a class="active" href="#">Member</a></li>
+     <li><a class="active" href="/logout">Logout</a></li>
+</ul>
 	<div align="center">
 		<h1>Name List</h1>
 

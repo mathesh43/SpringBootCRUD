@@ -1,4 +1,6 @@
-<!Doctype html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
 <html>
 <head>
  <link rel="stylesheet" href="css/login.css"></link>
@@ -9,15 +11,10 @@
   <li><a class="active" >LIBRARY MANAGEMENT SYSTEM</a></li>
 </ul>
 
-
-
-<h1>hi user</h1>
-<a href="/welcome">welcome</a>
-<a href="/login">Login</a>
 <div class="form_center">
     <h2>Login Form</h2>
 
-<form action="login" method="post">
+<form action="login">
   <div class="container">
    <input type="text" placeholder="Enter Username" name="username" required>
     <input type="password" placeholder="Enter Password" name="password" required>
@@ -29,9 +26,3 @@
 </div>
 </body>
 </html>
-
-
-
-
-
-

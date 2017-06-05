@@ -14,11 +14,14 @@ import org.springframework.web.servlet.ModelAndView;
 import com.example.demo.service.CRUDService;
 
 @Controller
+
 public class CRUDController {
 
 	@Autowired
 	private CRUDService crudservice;
 
+	
+	
 	@RequestMapping("/welcome")
 	public String welcome() {
 		return crudservice.hello();
@@ -30,16 +33,10 @@ public class CRUDController {
 		return new ModelAndView("add");
 	}
 
-	@RequestMapping(value = "/add", method = RequestMethod.GET)
-	public ModelAndView add_get(@ModelAttribute CRUD crud) {
-		crudservice.add(crud);
-		return new ModelAndView("add");
-	}
-
 	@RequestMapping("/list")
 	public ModelAndView listall(ModelAndView model) {
 		List<CRUD> listname = crudservice.getAllName();
-		ModelAndView r = model.addObject("listname", listname);
+		model.addObject("listname", listname);
 		model.setViewName("list");
 		return model;
 
@@ -64,5 +61,6 @@ public class CRUDController {
 		crudservice.updateName(crud);
 		return "redirect:/list";
 	}
+	
 
 }

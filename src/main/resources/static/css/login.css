@@ -1,0 +1,88 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ECECEC;
+}
+
+li {
+    float: left;
+}
+
+li a {
+	cursor:default;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: #000FA4;
+    text-size:1px
+}
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    border: 3px solid #f1f1f1;
+    width: 250px;
+    height: 230px;
+    border: 1px solid blue;
+    box-sizing: border-box;
+    border-color: #ccc
+   
+    
+}
+div.form_center {
+  position: fixed; /* or absolute */
+  top: 25%;
+  left: 38%;
+}
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #000FA4;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 105px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.container {
+    padding: 16px;
+}
+div.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+	width:100%;
+	height:auto;
+	padding: 0px,0px;
+}
+
+/* Style the buttons inside the tab */
+div.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    
+    transition: 0.3s;
+    color: black;
+	width:auto
+}
