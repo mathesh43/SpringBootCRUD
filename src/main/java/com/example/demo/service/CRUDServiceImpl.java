@@ -17,41 +17,38 @@ public class CRUDServiceImpl implements CRUDService {
 		this.cruddao = cruddao;
 	}
 
-	
 	public String hello() {
 		return "welcome";
 	}
+
 	public void add(CRUD crud) {
-		
+
 		cruddao.add(crud);
 
 	}
 
-
 	@Override
 	public List<CRUD> getAllName() {
-	
-		return cruddao.getAllName();		
-		
-	}
 
+		return cruddao.getAllName();
+
+	}
 
 	@Override
 	public void deleteName(Integer id) {
 		cruddao.deleteName(id);
 	}
+
 	@Override
 	public CRUD getNameById(int id) {
 		CRUD crud = cruddao.getNameById(id);
 		return crud;
 	}
 
-
 	@Override
 	public void updateName(CRUD crud) {
-		System.out.println("controller before crudservice call*************************");
 		cruddao.updateName(crud);
-		
+
 	}
-	
+
 }
