@@ -30,7 +30,7 @@ public class CRUDServiceImpl implements CRUDService {
 
 	@Override
 	public List<CRUD> getAllName() {
-		System.out.println("controller before crudservice call*************************");
+	
 		return cruddao.getAllName();		
 		
 	}
@@ -49,6 +49,7 @@ public class CRUDServiceImpl implements CRUDService {
 
 	@Override
 	public void updateName(CRUD crud) {
+		System.out.println("controller before crudservice call*************************");
 		cruddao.updateName(crud);
 		
 	}

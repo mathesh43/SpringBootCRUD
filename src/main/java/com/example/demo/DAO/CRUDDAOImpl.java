@@ -24,7 +24,7 @@ public class CRUDDAOImpl implements CRUDDAO {
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<CRUD> getAllName() {
-		System.out.println("controller before cruddao call*************************");
+		
 		String hql = "from CRUD";
 		return (List<CRUD>) entityManager.createQuery(hql).getResultList();
 		
@@ -41,11 +41,12 @@ public class CRUDDAOImpl implements CRUDDAO {
 	}
 	@Override
 	public void updateName(CRUD crud) {
+		System.out.println("controller before cruddao call*************************");
 		CRUD crudname = getNameById(crud.getId());
 		crudname.setFirstname(crud.getFirstname());
 		crudname.setLastname(crud.getLastname());
 		entityManager.flush();
-		
+		System.out.println("controller after cruddao call*************************");
 	}
 	
 	

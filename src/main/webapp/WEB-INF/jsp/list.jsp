@@ -13,8 +13,8 @@
 			<th>id</th>
 			<th>firstname</th>
 			<th>lastname</th>
-			<th>EDIT</th>
-			<th>DELETE</th>
+			<th>Action</th>
+		
 
 			<c:forEach var="list" items="${listname}">
 				<tr>
@@ -22,7 +22,7 @@
 					<td>${list.id}</td>
 					<td>${list.firstname}</td>
 					<td>${list.lastname}</td>
-					<td><a href="edit/${list.id}">Edit</a>
+					<td><a href="/edit?id=${list.id}">Edit</a>
 						&nbsp;&nbsp;&nbsp;&nbsp; <a
 						href="delete/${list.id}">Delete</a></td>
 
