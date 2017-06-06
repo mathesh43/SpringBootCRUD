@@ -44,8 +44,14 @@ public class CRUDDAOImpl implements CRUDDAO {
 	@Override
 	public void updateName(CRUD crud) {
 		CRUD crudname = getNameById(crud.getId());
-		crudname.setFirstname(crud.getFirstname());
-		crudname.setLastname(crud.getLastname());
+		crudname.setName(crud.getName());
+		crudname.setFathername(crud.getFathername());
+		crudname.setContactno(crud.getContactno());
+	
+		crudname.setDob(crud.getDob());
+		crudname.setEmail(crud.getEmail());
+		crudname.setAadharcardno(crud.getAadharcardno());
+		crudname.setAddress(crud.getAddress());
 		entityManager.flush();
 	}
 

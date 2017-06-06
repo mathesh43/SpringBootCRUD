@@ -17,9 +17,7 @@ public class CRUDServiceImpl implements CRUDService {
 		this.cruddao = cruddao;
 	}
 
-	public String hello() {
-		return "welcome";
-	}
+	
 
 	public void add(CRUD crud) {
 

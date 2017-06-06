@@ -3,7 +3,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #ECECEC;
+    background-color: #032B60;
 }
 
 li {
@@ -17,8 +17,8 @@ li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    background-color: #000FA4;
-    text-size:1px
+    background-color: #032B60;
+    text-size:1px;
 }
 form {
     display: flex;
@@ -49,7 +49,7 @@ input[type=text], input[type=password] {
 }
 
 button {
-    background-color: #000FA4;
+    background-color: #032B60;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;

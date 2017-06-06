@@ -14,7 +14,7 @@
 <div class="form_center">
     <h2>Login Form</h2>
 
-<form action="login">
+<form action="login" , method="post">
   <div class="container">
    <input type="text" placeholder="Enter Username" name="username" required>
     <input type="password" placeholder="Enter Password" name="password" required>

@@ -6,26 +6,45 @@
 <link rel="stylesheet" href="css/adminmenu.css"></link>
 </head>
 
-<title>Employee Management Screen</title>
+<title>Member details</title>
+<style>
+
+</style>
 </head>
 <body>
 
+<div class="tab">
 <ul>
-  <li ><a class="stable"  >Library Management System</a></li>
-  <li><a class="active" href="#">Home</a></li>
-  <li><a class="active" href="#">Books</a></li>
-  <li><a class="active" href="#">Category</a></li>
-  <li><a class="active" href="#">Rack</a></li>
-  <li><a class="active" href="#">Member</a></li>
-     <li><a class="active" href="/logout">Logout</a></li>
+<li><a class="mainmenu">Library Management System</a></li>
 </ul>
-	<div align="center">
-		<h1>Name List</h1>
+</div>
+<ul>
+	
+	<li><a class="active" href="/home">Home</a></li>
+   <li><a class="active" href="/books">Books</a></li>
+  <li><a class="active" href="/category">Category</a></li>
+  <li><a class="active" href="/rack">Rack</a></li>
+  <li><a class="activebar" href="/list">Member</a></li>
+     <li><a class="mainmenu1" href="/logout">Logout</a></li>
+</ul>
+<div>
 
-		<table border="1">
-			<th>id</th>
-			<th>firstname</th>
-			<th>lastname</th>
+		<h1>Member list</h1>
+		<h4 align="right"><a href="/add",method="post">To enter New book click here</a></h4>
+		</div>
+	<div align="center">
+		
+
+		<table border="1px solid black">
+			<th>ID</th>
+			<th>Name</th>
+			<th>Fathername</th>
+			<th>Contact no</th>
+
+			<th>Date of Birth</th>
+			<th>Email id</th>
+			<th>Aadhar card no</th>
+			<th>Address</th>
 			<th>Action</th>
 
 
@@ -33,17 +52,20 @@
 				<tr>
 
 					<td>${list.id}</td>
-					<td>${list.firstname}</td>
-					<td>${list.lastname}</td>
+					<td>${list.name}</td>
+					<td>${list.fathername}</td>
+					<td>${list.contactno}</td>
+					<td>${list.dob}</td>
+					<td>${list.email}</td>
+					<td>${list.aadharcardno}</td>
+					<td>${list.address}</td>
 					<td><a href="/edit?id=${list.id}">Edit</a>
 						&nbsp;&nbsp;&nbsp;&nbsp; <a href="delete/${list.id}">Delete</a></td>
 
 				</tr>
 			</c:forEach>
 		</table>
-		<h4>
-			New name Register <a href="/welcome">here</a>
-		</h4>
+		
 	</div>
 </body>
 </html>

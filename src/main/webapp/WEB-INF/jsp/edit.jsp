@@ -2,29 +2,76 @@
 <html>
 <head>
 <link rel="stylesheet" href="css/adminmenu.css"></link>
+<script src="js/emailvalidation.js"></script>
 <title>Employee Management Screen</title>
 </head>
+<div class="tab">
 <ul>
-  <li ><a class="stable"  >Library Management System</a></li>
-  <li><a class="active" href="#">Home</a></li>
-  <li><a class="active" href="#">Books</a></li>
-  <li><a class="active" href="#">Category</a></li>
-  <li><a class="active" href="#">Rack</a></li>
-  <li><a class="active" href="#">Member</a></li>
-   <li><a class="active" href="/logout">Logout</a></li>
+<li><a class="mainmenu">Library Management System</a></li>
+</ul>
+</div>
+<ul>
+	
+	<li><a class="active" href="/home">Home</a></li>
+   <li><a class="active" href="/books">Books</a></li>
+  <li><a class="active" href="/category">Category</a></li>
+  <li><a class="active" href="/rack">Rack</a></li>
+  <li><a class="active" href="/list">Member</a></li>
+   <li><a class="mainmenu1" href="/logout">Logout</a></li>
 </ul>
 <body>
 	<div align="center">
 		<h1>Edit the list</h1>
 
-		<form action="/update" method="get">
-			ID:<br> <input type="text" name="id" value="${crudop.id}"
-				readonly> <br> First name:<br> <input type="text"
-				name="firstname" value="${crudop.firstname}" required> <br>
-			Last name:<br> <input type="text" name="lastname"
-				value="${crudop.lastname}" required> <br>
-			<br> <input type="submit" value="Submit">
-		</form>
+		<form action="/update" method="post" name="myForm"
+		onsubmit="return validateForm();">
+		<table  >
+		<tr>
+				<td>ID:</td>
+				<td><input type="text" name="id" value="${crudop.id}" required readonly></td>
+			</tr>
+			<tr>
+				<td>Name:</td>
+				<td><input type="text" name="name" value="${crudop.name}" required></td>
+			</tr>
+			
+			<tr>
+				<td>Fathername:</td>
+				<td><input type="text" name="fathername" value="${crudop.fathername}" required></td>
+			</tr>
+			<tr>
+				<td>Contact No:</td>
+				<td><input type="number" name="contactno" min="1"
+					max="9999999999" value="${crudop.contactno}" required></td>
+			</tr>
+			
+			<tr>
+				<td>Date of Birth:</td>
+				<td><input type="date" name="dob" value="${crudop.dob}"></td>
+			</tr>
+			<tr>
+				<td>Email ID:</td>
+				<td><input type="text" name="email" value="${crudop.email}"></td>
+			</tr>
+			<tr>
+				<td>Aadhar Card No:</td>
+				<td><input type="number" name="aadharcardno" min="1"
+					max="9999999999999" value="${crudop.aadharcardno}" required></td>
+			</tr>
+			<tr>
+				<td>Address:</td>
+				<td><input type="text" name="address" value="${crudop.address}" required></td>
+			</tr>
+
+
+
+			<tr><td></td>
+				<td><input background-color= "#032B60" type="submit" value="Submit"></td>
+			</tr>
+		</table>
+	</form>
+
+	    
 
 
 		<h4>

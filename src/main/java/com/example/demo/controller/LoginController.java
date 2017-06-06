@@ -20,7 +20,7 @@ public class LoginController {
 			    String user = (String)request.getAttribute("username");
 			    session.setAttribute("UserName", user);
 			
-			return "/list";	
+			return "/home";	
 		}
 		else {
 			return "error";

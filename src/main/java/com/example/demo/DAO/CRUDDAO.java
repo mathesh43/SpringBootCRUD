@@ -4,7 +4,9 @@ import java.util.List;
 
 import com.example.demo.Entity.CRUD;
 
+
 public interface CRUDDAO {
+
 
 	public void add(CRUD crud);
 

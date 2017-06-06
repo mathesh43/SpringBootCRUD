@@ -22,17 +22,20 @@ public class CRUDController {
 
 	
 	
-	@RequestMapping("/welcome")
-	public String welcome() {
-		return crudservice.hello();
-	}
+	
 
-	@RequestMapping(value = "/add", method = RequestMethod.POST)
-	public ModelAndView add(@ModelAttribute CRUD crud) {
+	@RequestMapping(value = "/save", method = RequestMethod.POST)
+	public String add(@ModelAttribute CRUD crud) {
 		crudservice.add(crud);
-		return new ModelAndView("add");
+		return "redirect:/list";
 	}
 
+	
+	@RequestMapping("/add")
+	public String add() {
+		return "add";
+	}
+	
 	@RequestMapping("/list")
 	public ModelAndView listall(ModelAndView model) {
 		List<CRUD> listname = crudservice.getAllName();
@@ -56,11 +59,30 @@ public class CRUDController {
 
 	}
 
-	@RequestMapping("/update")
+	@RequestMapping(value="/update",method = RequestMethod.POST)
 	public String updateName(@ModelAttribute CRUD crud) {
 		crudservice.updateName(crud);
 		return "redirect:/list";
 	}
-	
+	@RequestMapping("/home")
+	public String home(@ModelAttribute CRUD crud) {
+		
+		return "home";
+	}
+	@RequestMapping("/books")
+	public String books(@ModelAttribute CRUD crud) {
+		
+		return "books";
+	}
+	@RequestMapping("/rack")
+	public String rack(@ModelAttribute CRUD crud) {
+		
+		return "rack";
+	}
+	@RequestMapping("/category")
+	public String category(@ModelAttribute CRUD crud) {
+		
+		return "category";
+	}
 
 }
