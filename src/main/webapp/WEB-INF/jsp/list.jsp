@@ -2,7 +2,7 @@
 
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
 <link rel="stylesheet" href="css/adminmenu.css"></link>
 </head>
 
@@ -19,7 +19,7 @@
 </ul>
 </div>
 <ul>
-	
+
 	<li><a class="active" href="/home">Home</a></li>
    <li><a class="active" href="/books">Books</a></li>
   <li><a class="active" href="/category">Category</a></li>
@@ -27,13 +27,45 @@
   <li><a class="activebar" href="/list">Member</a></li>
      <li><a class="mainmenu1" href="/logout">Logout</a></li>
 </ul>
-<div>
 
-		<h1>Member list</h1>
-		<h4 align="right"><a href="/add",method="post">To enter New book click here</a></h4>
-		</div>
+
+
+<table>
+		<tr> <td></td><td><h1><u>Member list</u></h1></td></tr>
+		<tr>
+		<td></td>
+			<td> <form action="/search">
+		<input type="text" name="search" value= "${searchkey }" required>
+		<input type="submit"  value="search">
+		</form> </td>
+
+		<td></td>
+
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+				<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+<td></td>
+<td><h4 align="right"><a href="/add",method="post">NEW</a></h4></td></tr>
+</table>
 	<div align="center">
-		
+
 
 		<table border="1px solid black">
 			<th>ID</th>
@@ -65,7 +97,8 @@
 				</tr>
 			</c:forEach>
 		</table>
-		
+
 	</div>
+
 </body>
 </html>

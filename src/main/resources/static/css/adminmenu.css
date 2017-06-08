@@ -4,24 +4,24 @@ ul {
     padding: 0;
     overflow: hidden;
     border: 1px solid #032B60;
-   
+
 }
 
 li {
-   
+
 }
 
 li a {
     float: left;
      background-color: #ffffff;
-	
+
     display: block;
     color: #032B60;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     background-color: #ffffff;
-  
+
 }
 .mainmenu {
 
@@ -37,23 +37,23 @@ cursor:default;
     background-color: #032B60;
 }
 .active {
- margin-left: 2em; 
- 
+ margin-left: 2em;
+
 
 }
 .active:hover {
     background-color:#032B60;
     color:white;
-    
+
 }
 .activebar {
-	margin-left: 2em; 
+	margin-left: 2em;
 	background-color:#032B60;
     color:white;
 }
 
 table, th, td {
-   
+
     border-collapse: collapse;
 }
 th, td {
@@ -70,14 +70,13 @@ float: right;
 .mainmenu1:hover {
     background-color:#032B60;
     color:white;
-    
+
 }
 div.tab {
  background-color:#032B60;
 
 }
 input[type=submit] {
-    width: 100%;
     background-color: #032B60;
     color: white;
     padding: 14px 20px;
